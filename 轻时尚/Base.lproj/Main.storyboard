@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="轻时尚" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="KDH-k3-FHU"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-744" y="57"/>
+        </scene>
+        <!--选择你的style-->
+        <scene sceneID="BJT-tK-5Xm">
+            <objects>
+                <viewController storyboardIdentifier="second" id="YLw-xB-pHF" customClass="secondeViewController" customModule="轻时尚" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ypF-h9-WRw"/>
+                        <viewControllerLayoutGuide type="bottom" id="MVD-fS-IFE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="u80-L0-58a">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pRB-Ht-tCF">
+                                <rect key="frame" x="0.0" y="200" width="600" height="216"/>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="最喜爱的明星" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nO6-NY-XZ7">
+                                <rect key="frame" x="20" y="142" width="149" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" restorationIdentifier="GOToGallery" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M0W-SV-nQD">
+                                <rect key="frame" x="185" y="424" width="76" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="确定"/>
+                                <connections>
+                                    <segue destination="YIO-Ck-QaO" kind="push" identifier="GOToGallery" id="1qG-3v-hz8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="M0W-SV-nQD" firstAttribute="leading" secondItem="u80-L0-58a" secondAttribute="leading" constant="185" id="3ax-l2-gmj"/>
+                            <constraint firstItem="M0W-SV-nQD" firstAttribute="top" secondItem="pRB-Ht-tCF" secondAttribute="bottom" constant="8" symbolic="YES" id="7Bx-SE-L1C"/>
+                            <constraint firstItem="pRB-Ht-tCF" firstAttribute="leading" secondItem="u80-L0-58a" secondAttribute="leading" id="O0X-JZ-FmC"/>
+                            <constraint firstItem="pRB-Ht-tCF" firstAttribute="top" secondItem="ypF-h9-WRw" secondAttribute="bottom" constant="136" id="Wyw-6S-J0a"/>
+                            <constraint firstAttribute="trailing" secondItem="pRB-Ht-tCF" secondAttribute="trailing" id="hyc-bE-Rsq"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="选择你的style" id="iW9-Pm-8Ve"/>
+                    <connections>
+                        <outlet property="beautyPicker" destination="pRB-Ht-tCF" id="pZj-O3-ht2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lm7-sP-TsI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-33" y="57"/>
+        </scene>
+        <!--Gallery View Controller-->
+        <scene sceneID="4zs-3P-2nx">
+            <objects>
+                <viewController id="YIO-Ck-QaO" customClass="GalleryViewController" customModule="轻时尚" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qb0-vU-Qo7"/>
+                        <viewControllerLayoutGuide type="bottom" id="wWH-Rg-i9x"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7a7-1l-epf">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="angelababy" translatesAutoresizingMaskIntoConstraints="NO" id="Wur-Y6-3qV">
+                                <rect key="frame" x="-212" y="-380" width="846" height="1500"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="846" id="ZWD-sp-h39"/>
+                                    <constraint firstAttribute="height" constant="1500" id="kcO-v7-eVM"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Wur-Y6-3qV" firstAttribute="leading" secondItem="7a7-1l-epf" secondAttribute="leading" constant="-212" id="1Os-T5-bIw"/>
+                            <constraint firstItem="Wur-Y6-3qV" firstAttribute="top" secondItem="7a7-1l-epf" secondAttribute="top" constant="-380" id="3lh-F8-avV"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="E00-Le-uaf">
+                        <rightBarButtonItems>
+                            <barButtonItem title="分享" id="Nlv-pP-mGy">
+                                <connections>
+                                    <action selector="shareTapped:" destination="YIO-Ck-QaO" id="gk5-3v-lSN"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem style="plain" id="Mw3-JV-7jO">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="y6K-c7-hdV">
+                                    <rect key="frame" x="405" y="7" width="133" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </button>
+                            </barButtonItem>
+                            <barButtonItem title="分享" style="plain" id="hw9-0C-BNI">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="IWM-w1-AuO">
+                                    <rect key="frame" x="264" y="7" width="133" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </button>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="beautyimage" destination="Wur-Y6-3qV" id="cWO-gj-BjM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yUO-f0-aRu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-33" y="813"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="1Of-1k-Zie">
+            <objects>
+                <navigationController storyboardIdentifier="first" automaticallyAdjustsScrollViewInsets="NO" id="NOu-iD-brK" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Zpg-ug-Cgj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="YLw-xB-pHF" kind="relationship" relationship="rootViewController" id="fl3-II-yBs"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="otS-MC-ad3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-752" y="771"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="angelababy" width="423" height="750"/>
+    </resources>
+</document>
